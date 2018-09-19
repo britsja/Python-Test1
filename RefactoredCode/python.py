@@ -1,18 +1,10 @@
-def check_if_even(number):
-    if number % 2 == 0 and number > 0:
-        return True
-    else:
-        return False
-        
+def is_even(number):
+    return number % 2 == 0
+
 def even_number_of_evens(numbers):
-    count = 0
-    for number in numbers:
-        if check_if_even(number):
-            count += 1
-    if check_if_even(count):
-        return True
-    else:
-        return False
+
+    evens = sum([1 for n in numbers if is_even(n)])
+    return False if evens == 0 else is_even(evens)
 
         
 assert even_number_of_evens([]) == False, "No numbers"
