@@ -15,6 +15,6 @@ def test_between(value):
     assert value in range(1, 101), "{0} not in the range of 1 and 100".format(value)
     
 
-test_not_equal(1, 1)
+test_not_equal(1, 2)
 
 test_between(100)
